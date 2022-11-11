@@ -1,0 +1,66 @@
+import { Card, Typography } from '@mui/material'
+import React from 'react'
+
+const UpcommingAppoinmentIndividual = () => {
+    const json = [{
+        id: "sscscc",
+        doctor: "Dr.Justin",
+        mode: "Online",
+        from: "11:00",
+        to: "14:00"
+    }, {
+        id: "sscscc",
+        doctor: "Dr.Justin",
+        mode: "Online",
+        from: "11:00",
+        to: "14:00"
+    }, {
+        id: "sscscc",
+        doctor: "Dr.Justin",
+        mode: "Online",
+        from: "11:00",
+        to: "14:00"
+    }, {
+        id: "sscscc",
+        doctor: "Dr.Justin",
+        mode: "Online",
+        from: "11:00",
+        to: "14:00"
+    }]
+    return (
+        <Card>
+            <div>
+                Upcomming Appoimnet
+            </div>
+            <div style={{
+                height: '200px', overflowY: "scroll",
+                // justifyContent: 'center', flexDirection: 'column'
+            }}>
+                {json.map((data, i) => (
+                    <Card key={i} style={{
+                        // backgroundColor: '#c7c7c7',
+                        height: '36%',
+                        width: '80%',
+                        padding: "10px",
+                        margin: '5px 5%',
+                        marginTop: '5px',
+                        borderLeft: '5px solid #5b98de'
+                    }}>
+                        <Typography>
+                            Appoiment With {data.doctor}
+                        </Typography>
+                        <div>
+                            {data.mode}
+                        </div>
+                        <div>
+                            {data.from}-{data.to}
+                        </div>
+                    </Card>
+                ))
+                }
+            </div>
+        </Card>
+    )
+}
+
+export default UpcommingAppoinmentIndividual

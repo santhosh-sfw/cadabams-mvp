@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/cadabams-mvp/static/css/main.a1c3d0a0.css",
+    "main.js": "/cadabams-mvp/static/js/main.40b4fe85.js",
+    "static/js/787.635e832e.chunk.js": "/cadabams-mvp/static/js/787.635e832e.chunk.js",
+    "static/media/revicons.eot": "/cadabams-mvp/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/cadabams-mvp/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/cadabams-mvp/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/logo.svg": "/cadabams-mvp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/cadabams-mvp/index.html",
+    "main.a1c3d0a0.css.map": "/cadabams-mvp/static/css/main.a1c3d0a0.css.map",
+    "main.40b4fe85.js.map": "/cadabams-mvp/static/js/main.40b4fe85.js.map",
+    "787.635e832e.chunk.js.map": "/cadabams-mvp/static/js/787.635e832e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1c3d0a0.css",
+    "static/js/main.40b4fe85.js"
+  ]
+}

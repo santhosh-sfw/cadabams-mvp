@@ -19,7 +19,7 @@ const ManageAppoimnet = () => {
       </div>
       <div>
         <ArrowOutwardOutlinedIcon style={{
-          border: '1px solid black',
+          border: '1px solid #042447',
           borderRadius: '10px',
           padding: "10px"
         }} />

@@ -8,17 +8,18 @@ const TotalAppoinmentCard = () => {
       borderRadius: '10px',
       padding: '10px',
       height: '150px',
-      marginBottom:'20px'
+      marginBottom: '20px'
 
     }}>
       <div style={{
         width: "90%",
         fontSize: "1.5rem",
-        paddingBottom: '10px'
+        paddingBottom: '10px',
       }}>Total Appoinment Completed
       </div>
       <div style={{
-        fontSize: '2.25rem'
+        fontSize: '2.25rem',
+        fontWeight: 'bold'
       }}>420</div>
     </Card>
   )

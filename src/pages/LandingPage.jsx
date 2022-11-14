@@ -22,7 +22,6 @@ const LandingPage = () => {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
-
     return (
         <>
             <AppBars />
@@ -31,24 +30,24 @@ const LandingPage = () => {
                 backgroundColor: '#f8f8f8',
             }}>
                 <Grid container spacing={2}>
-                    <Grid container item xs={6} md={8} spacing={2}>
-                        <Grid item xs={6} md={8}>
+                    <Grid container item xs={12} md={8} spacing={2}>
+                        <Grid item xs={12} md={8}>
                             <AppoinmentCard />
                         </Grid>
-                        <Grid item xs={6} md={4}>
+                        <Grid item xs={12} md={4}>
                             <StartAppoinmentCard />
                         </Grid>
-                        <Grid item xs={6} md={4}>
+                        <Grid item xs={12} md={4}>
                             <ManageAppoimnet />
-                        </Grid> <Grid item xs={6} md={4}>
+                        </Grid> <Grid item xs={12} md={4}>
                             <ResourceCheckoutCard />
-                        </Grid> <Grid item xs={6} md={4}>
+                        </Grid> <Grid item xs={12} md={4}>
                             <VideoCarousal />
                         </Grid>
-                        <Grid item xs={6} md={8}>
+                        <Grid item xs={12} md={8}>
 
                             <AddCarousal />                        </Grid>
-                        <Grid item conatiner xs={6} md={4} spacing={2}>
+                        <Grid item conatiner xs={12} md={4} spacing={2}>
                             <Grid item xs={12} md={12}>
 
 
@@ -61,7 +60,7 @@ const LandingPage = () => {
                         </Grid>
 
                     </Grid>
-                    <Grid container item xs={4} spacing={2}>
+                    <Grid container item xs={12} md={4} spacing={2}>
                         <Grid item xs={12} md={12}>
                             <UpcommingAppoinment />
                         </Grid>

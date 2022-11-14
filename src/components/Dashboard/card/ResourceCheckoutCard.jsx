@@ -18,7 +18,7 @@ const ResourceCheckoutCard = () => {
       </div>
       <div>
         <AutoStoriesOutlinedIcon style={{
-          border: '1px solid black',
+          border: '1px solid #223351',
           borderRadius: '10px',
           padding:'10px'
         }} />

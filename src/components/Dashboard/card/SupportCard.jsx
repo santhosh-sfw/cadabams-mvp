@@ -18,15 +18,15 @@ const SupportCard = () => {
     }}>
       <div style={{
         fontSize: "1rem",
-        fontWeight:'bolder'
+        fontWeight: 'bolder'
       }}>SupportCard</div>
       <CallOutlinedIcon style={{
-        border: '1px solid black',
+        border: '1px solid #042447',
         padding: '10px',
         borderRadius: '10px'
       }} />
       <MessageOutlinedIcon style={{
-        border: '1px solid black',
+        border: '1px solid #042447',
         padding: '10px',
         borderRadius: '10px'
       }} />

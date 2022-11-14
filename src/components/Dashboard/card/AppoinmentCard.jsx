@@ -13,7 +13,9 @@ const AppoinmentCard = () => {
         }}>
             <Grid container item xs={12} md={12}>
                 <div>
-                    <Typography className="nextAppoinment">
+                    <Typography style={{
+                        fontWeight: 'bold'
+                    }}>
                         Next Appointment
                     </Typography>
                 </div>
@@ -26,16 +28,16 @@ const AppoinmentCard = () => {
                         <Typography style={{
                             fontSize: "2rem", fontWeight: 'bold'
                         }} >
-                            22
+                            22 
                         </Typography>
                         <Typography style={{
                             fontWeight: 'bold'
                         }}>
-                            August,2022
+                            August ,2022
                         </Typography>
 
                         <Typography>
-                            thursday
+                            Thursday
                         </Typography>
                     </div>
                     <div>

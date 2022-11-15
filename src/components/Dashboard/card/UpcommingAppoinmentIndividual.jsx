@@ -1,6 +1,7 @@
 import { Card, Typography } from '@mui/material'
 import React from 'react'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import moment from 'moment/moment';
 const UpcommingAppoinmentIndividual = ({ list }) => {
 
     return (
@@ -48,7 +49,7 @@ const UpcommingAppoinmentIndividual = ({ list }) => {
                             Online
                         </div>
                         <div>
-                            {data?.start_date} {(data?.start_time).substring(0, 5)}-{(data?.end_time).substring(0, 5)}
+                            {moment(data?.start_date).format('DD MMM YYYY') } { moment(`${data?.start_date} ${data?.start_time}`).format('HH:MM')} - {moment(`${data?.end_date} ${data?.end_time}`).format('HH:MM')}
                         </div>
                     </Card>
                 )) : <Card key="i" style={{

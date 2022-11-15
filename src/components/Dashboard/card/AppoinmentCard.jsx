@@ -1,7 +1,45 @@
 import { Grid, Typography, Card } from '@mui/material'
 import React from 'react'
+import moment from 'moment'
 
-const AppoinmentCard = () => {
+const AppoinmentCard = ({ upcomming }) => {
+    console.log(upcomming)
+    let dateformat = moment(upcomming?.start_date).format('MMMM DD yyyy')
+    let dataformat1 = dateformat.split(" ")
+    const setDay = (date) => {
+        let day = moment(date).day();
+        console.log(day, "day")
+
+        switch (day) {
+            case 0:
+                return "Sunday";
+                break;
+            case 1:
+                return "Monday";
+                break;
+            case 2:
+                return "Tuesday";
+                break;
+            case 3:
+                return "Wednesday";
+                break;
+            case 4:
+                return "Thursday";
+                break;
+            case 5:
+                return "Friday";
+                break;
+            case 6:
+                return "saturday";
+                break;
+        }
+    }
+    const days = setDay(upcomming?.start_date);
+
+    console.log(days, "format")
+    const mon = dataformat1[0];
+    const date = dataformat1[1];
+    const year = dataformat1[2]
     return (
         <Card style={{
             backgroundColor: "#bfddff",
@@ -28,24 +66,24 @@ const AppoinmentCard = () => {
                         <Typography style={{
                             fontSize: "2rem", fontWeight: 'bold'
                         }} >
-                            22 
+                            {date}
                         </Typography>
                         <Typography style={{
                             fontWeight: 'bold'
                         }}>
-                            August ,2022
+                            {mon},&nbsp;{year}
                         </Typography>
 
                         <Typography>
-                            Thursday
+                            {days}
                         </Typography>
                     </div>
                     <div>
                         <Typography style={{
                             fontSize: "2rem", fontWeight: 'bold'
-                        }} >16:30</Typography>
+                        }} >{(upcomming?.start_time)?.substring(0, 5)}</Typography>
                         <Typography>
-                            with Dr.xyz Placeholder
+                          Appointment with {upcomming?.doctor_name}
                         </Typography>
                         <Typography style={{
                             fontWeight: 'bold'

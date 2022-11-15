@@ -9,7 +9,7 @@ const SupportCard = () => {
       color: "#042447",
       borderRadius: '10px',
       padding: '10px',
-      height: '100px',
+      height: '130px',
       display: 'flex',
       justifyContent: 'space-around',
       alignItems: 'center'

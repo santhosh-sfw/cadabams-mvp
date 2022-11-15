@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from '@mui/material'
-const TotalAppoinmentCard = () => {
+const TotalAppoinmentCard = ({count}) => {
   return (
     <Card style={{
       backgroundColor: "#fcf4f0",
@@ -20,7 +20,7 @@ const TotalAppoinmentCard = () => {
       <div style={{
         fontSize: '2.25rem',
         fontWeight: 'bold'
-      }}>420</div>
+      }}>{count}</div>
     </Card>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import AppoinmentCalender from '../Calender/AppoinmentCalender'
 import UpcommingAppoinmentIndividual from './UpcommingAppoinmentIndividual'
-const UpcommingAppoinment = () => {
+const UpcommingAppoinment = ({ list }) => {
   return (
     <div>
       <AppoinmentCalender />
-      <UpcommingAppoinmentIndividual />
+      <UpcommingAppoinmentIndividual list={list} />
     </div>
   )
 }

@@ -69,7 +69,7 @@ const QuoteCarousal = () => {
             backgroundColor: "#3a84d7",
             borderRadius: "10px",
             color: '#FFF',
-            height: '150px',
+            height: '100px',
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',

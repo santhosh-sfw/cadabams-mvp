@@ -35,7 +35,7 @@ const LandingPage = () => {
     const getDashboardJson = () => {
         axios({
             method: 'get',
-            url: API.TEST,
+            url: API.DASHBOARD,
             responseType: 'json'
         })
             .then(function (response) {

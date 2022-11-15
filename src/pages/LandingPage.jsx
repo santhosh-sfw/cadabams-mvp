@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { Container, Grid, Paper, Typography } from '@mui/material'
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import AppBars from '../components/Dashboard/AppBar/AppBar'
 import AppoinmentCard from '../components/Dashboard/card/AppoinmentCard';
@@ -13,8 +13,13 @@ import TotalAppoinmentCard from '../components/Dashboard/card/TotalAppoinmentCar
 import SupportCard from '../components/Dashboard/card/SupportCard';
 import UpcommingAppoinment from '../components/Dashboard/card/UpcommingAppoinment';
 import QuoteCarousal from '../components/Dashboard/Carousal/QuoteCarousal';
+import { useState } from 'react';
+import axios from 'axios';
+import { API } from '../constants/APICONFIG';
+
 
 const LandingPage = () => {
+    const [data, setData] = useState()
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -22,6 +27,24 @@ const LandingPage = () => {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
+    useEffect(() => {
+        let output = getDashboardJson()
+        setData(output)
+    }, [])
+    console.log(data, "data value666")
+    const getDashboardJson = () => {
+        axios({
+            method: 'get',
+            url: API.TEST,
+            responseType: 'json'
+        })
+            .then(function (response) {
+                console.log(response?.data, "res")
+                setData(response?.data)
+            }).catch((error) => {
+                console.log(error)
+            })
+    }
     return (
         <>
             <AppBars />
@@ -32,7 +55,7 @@ const LandingPage = () => {
                 <Grid container spacing={2}>
                     <Grid container item xs={12} md={8} spacing={2}>
                         <Grid item xs={12} md={8}>
-                            <AppoinmentCard />
+                            <AppoinmentCard upcomming={data?.next_appointment} />
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <StartAppoinmentCard />
@@ -51,7 +74,7 @@ const LandingPage = () => {
                             <Grid item xs={12} md={12}>
 
 
-                                <TotalAppoinmentCard />
+                                <TotalAppoinmentCard count={data?.total_appointment_counts} />
                             </Grid>
                             <Grid item xs={12} md={12}>
 
@@ -62,7 +85,7 @@ const LandingPage = () => {
                     </Grid>
                     <Grid container item xs={12} md={4} spacing={2}>
                         <Grid item xs={12} md={12}>
-                            <UpcommingAppoinment />
+                            <UpcommingAppoinment list={data?.upcoming_appointments}  />
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <QuoteCarousal />

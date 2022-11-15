@@ -1,52 +1,24 @@
 import { Card, Typography } from '@mui/material'
 import React from 'react'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-const UpcommingAppoinmentIndividual = () => {
-    const json = [{
-        id: "sscscc",
-        doctor: "Dr.Justin",
-        mode: "Online",
-        date: "14 Nov 2022",
-        from: "11:00",
-        to: "14:00"
-    }, {
-        id: "sscscc",
-        doctor: "Dr.Justin",
-        mode: "Online",
-        from: "11:00",
-        date: "14 Nov 2022",
-        to: "14:00"
-    }, {
-        id: "sscscc",
-        doctor: "Dr.Justin",
-        mode: "Online",
-        from: "11:00",
-        date: "14 Nov 2022",
-        to: "14:00"
-    }, {
-        id: "sscscc",
-        doctor: "Dr.Justin",
-        mode: "Online",
-        date: "14 Nov 2022",
-        from: "11:00",
-        to: "14:00"
-    }]
+const UpcommingAppoinmentIndividual = ({ list }) => {
+
     return (
         <Card style={{
-            padding: "10px"
+            padding: "5px"
         }}>
 
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
                 color: "#5b98de",
-                padding:'0 5px'
+                padding: '0 5px'
 
             }}>
                 <Typography style={{
                     fontWeight: 'bold'
                 }}>
-                    Upcomming Appointment
+                    Upcoming Appointment
 
                 </Typography>
                 <Typography>
@@ -57,30 +29,43 @@ const UpcommingAppoinmentIndividual = () => {
                 height: '200px', overflowY: "scroll",
                 // justifyContent: 'center', flexDirection: 'column'
             }}>
-                {json.map((data, i) => (
+                {list ? list?.map((data, i) => (
                     <Card key={i} style={{
                         // backgroundColor: '#c7c7c7',
                         height: '36%',
                         width: '80%',
                         padding: "10px",
                         margin: '5px 5%',
-                        marginTop: '5px',
                         borderLeft: '5px solid #5b98de',
                         fontSize: '0.85rem'
                     }}>
                         <div style={{
                             fontWeight: 'bold'
                         }}>
-                            Appointment With {data.doctor}
+                            Appointment With {data?.doctor_name}
                         </div>
                         <div>
-                            {data.mode}
+                            Online
                         </div>
                         <div>
-                            {data.date} {data.from}-{data.to}
+                            {data?.start_date} {(data?.start_time).substring(0, 5)}-{(data?.end_time).substring(0, 5)}
                         </div>
                     </Card>
-                ))
+                )) : <Card key="i" style={{
+                    // backgroundColor: '#c7c7c7',
+                    height: '36%',
+                    width: '80%',
+                    padding: "10px",
+                    margin: '5px 5%',
+                    borderLeft: '5px solid #5b98de',
+                    fontSize: '0.85rem'
+                }}>
+                    <div style={{
+                        fontWeight: 'bold'
+                    }}>
+                        No Appointment found
+                    </div>
+                </Card>
                 }
             </div>
         </Card>

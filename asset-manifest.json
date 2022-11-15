@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cadabams-mvp/static/css/main.6c73f45f.css",
-    "main.js": "/cadabams-mvp/static/js/main.2fed17cd.js",
+    "main.js": "/cadabams-mvp/static/js/main.f865c836.js",
     "static/js/787.635e832e.chunk.js": "/cadabams-mvp/static/js/787.635e832e.chunk.js",
     "static/media/revicons.eot": "/cadabams-mvp/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/cadabams-mvp/static/media/revicons.57fd05d4ae650374c8de.ttf",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/cadabams-mvp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/cadabams-mvp/index.html",
     "main.6c73f45f.css.map": "/cadabams-mvp/static/css/main.6c73f45f.css.map",
-    "main.2fed17cd.js.map": "/cadabams-mvp/static/js/main.2fed17cd.js.map",
+    "main.f865c836.js.map": "/cadabams-mvp/static/js/main.f865c836.js.map",
     "787.635e832e.chunk.js.map": "/cadabams-mvp/static/js/787.635e832e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c73f45f.css",
-    "static/js/main.2fed17cd.js"
+    "static/js/main.f865c836.js"
   ]
 }

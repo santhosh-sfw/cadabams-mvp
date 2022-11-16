@@ -4,11 +4,14 @@ import moment from 'moment'
 
 const AppoinmentCard = ({ upcomming }) => {
     console.log(upcomming)
-    let dateformat = moment(upcomming?.start_date).format('MMMM DD yyyy')
-    let dataformat1 = dateformat.split(" ")
+    let dateformat1 = new Date(upcomming?.start_date)
+    dateformat1.setHours(dateformat1.getHours() + 5)
+    dateformat1.setMinutes(dateformat1.getMinutes() + 30)
+    let dateformat = moment(dateformat1).format('MMMM DD yyyy')
+    let dataformat11 = dateformat.split(" ")
     const setDay = (date) => {
         let day = moment(date).day();
-        console.log(day, "day")
+        console.log(dataformat11, "day")
 
         switch (day) {
             case 0:
@@ -37,9 +40,9 @@ const AppoinmentCard = ({ upcomming }) => {
     const days = setDay(upcomming?.start_date);
 
     console.log(days, "format")
-    const mon = dataformat1[0];
-    const date = dataformat1[1];
-    const year = dataformat1[2]
+    const mon = dataformat11[0];
+    const date = dataformat11[1];
+    const year = dataformat11[2]
     return (
         <Card style={{
             backgroundColor: "#bfddff",
@@ -81,9 +84,10 @@ const AppoinmentCard = ({ upcomming }) => {
                     <div>
                         <Typography style={{
                             fontSize: "2rem", fontWeight: 'bold'
-                        }} >{(upcomming?.start_time)?.substring(0, 5)}</Typography>
+                        }} >
+                            {moment(dateformat1).format("HH:mm")}</Typography>
                         <Typography>
-                          Appointment with {upcomming?.doctor_name}
+                            Appointment with {upcomming?.doctor_name}
                         </Typography>
                         <Typography style={{
                             fontWeight: 'bold'

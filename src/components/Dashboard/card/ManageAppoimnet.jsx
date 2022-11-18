@@ -14,7 +14,7 @@ const ManageAppoimnet = () => {
         width: "90%",
         fontSize: "1.5rem",
         paddingBottom: '10px'
-      }}>Manage Appoimnet
+      }}>Manage Appointment
 
       </div>
       <div>

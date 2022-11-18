@@ -21,26 +21,41 @@ const QuoteCarousal = () => {
     }
   };
   const jsonOutput = [{
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }, {
-    author: "Aron",
-    message: "Quote of the Week,this updates every week"
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
+  }, {
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
+  }, {
+    author: "Ralph Marston",
+    heading: "Quote of the Week",
+    message: "What you do today can improve all your tomorrows."
   }]
 
   return (
@@ -57,7 +72,7 @@ const QuoteCarousal = () => {
       customTransition="all .5"
       transitionDuration={500}
       containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile","desktop"]}
+      removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
       // deviceType={this.props.deviceType}
       dotListClass="custom-dot-list-style"
     // itemClass="carousel-item-padding-40-px"
@@ -70,19 +85,32 @@ const QuoteCarousal = () => {
             borderRadius: "10px",
             color: '#FFF',
             height: '100px',
-            textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent:'center'
+            // alignItems: 'center',
+            // justifyContent: 'center'
 
           }}>
-            <Typography>
+            <Typography style={{
+              textAlign: 'center',
+              fontweight: 'bold',
+            }}>
+              {data.heading}
+            </Typography>
+            <Typography style={{
+              fontSize: '14px',
+              textAlign: 'center',
+
+            }}>
+
               {data.message}
             </Typography>
-            <Typography>
+            <Typography style={{
+              textAlign: 'right',
+              fontweight: 'bold', paddingRight: '5px'
+            }}>
+              -{data.author}
 
-              {data.author}
             </Typography>
           </Card>
 

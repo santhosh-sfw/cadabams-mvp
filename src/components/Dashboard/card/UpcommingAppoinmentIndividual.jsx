@@ -70,16 +70,16 @@ const UpcommingAppoinmentIndividual = ({ list }) => {
                 </Typography>
             </div>
             <div style={{
-                height: '170px', overflowY: "scroll",
+                height: '200px', overflowY: "scroll",
                 // justifyContent: 'center', flexDirection: 'column'
             }}>
                 {list1 ? list1?.map((data, i) => (
                     <Card key={i} style={{
                         // backgroundColor: '#c7c7c7',
-                        height: '34%',
+                        height: '33%',
                         width: '80%',
                         padding: "10px",
-                        margin: '5px 5%',
+                        margin: '10px 5%',
                         borderLeft: '5px solid #5b98de',
                         fontSize: '0.85rem'
                     }}>

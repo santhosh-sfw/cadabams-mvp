@@ -15,7 +15,7 @@ const TotalAppoinmentCard = ({count}) => {
         width: "90%",
         fontSize: "1.5rem",
         paddingBottom: '10px',
-      }}>Total Appoinment Completed
+      }}>Total Appointment Completed
       </div>
       <div style={{
         fontSize: '2.25rem',

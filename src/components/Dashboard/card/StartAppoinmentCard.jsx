@@ -22,7 +22,7 @@ const StartAppoinmentCard = () => {
             }} />
             <div style={{
             }}>
-                Start Appoimnment
+                Start Appointment
 
             </div>
         </Card>
